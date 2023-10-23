@@ -1,0 +1,391 @@
+/*
+    CSS DE INTERFACE
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', 'Arial', 'Helvetica', 'Sans-serif';
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+header{
+    height: 100px;
+    background-color: #000;;
+}
+
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logoimg{
+    width: 80px;
+    height: 80px;
+    background-color: #B28756;
+    border-radius: 40px;
+}
+
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul,
+.munu li{
+    list-style: none;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu li a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    align-items: center;
+    border-bottom: 5px solid #000000;
+}
+
+.menu li a:hover,
+.menu .active a{
+    border-bottom: 5px solid #B28756;
+    color: #CCC;
+}
+
+.button{
+    display: inline-block;
+    background-color: #B28756;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    margin-top: 28px;
+    border-radius: 20px;
+}
+
+
+.banner{
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.banner .sliders{
+    height: 100%;
+    width: 1000vw;
+}
+
+.banner .slide{
+    height: 100%;
+    width: 100vw;
+    display: inline-block;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.banner .slidearea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.banner h1 span{
+    color: #B28756;
+}
+
+.banner h2{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.banner .sliders_pointers{
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.banner .pointer.active{
+    background-color: #B28756;
+}
+
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default .section-title{
+    font-size: 22px;
+}
+
+.default .section-desc{
+    font-size: 12px;
+    color: #CCC;
+    margin-top: 11px;
+    margin-bottom: 40px;
+}
+
+.default .section-body{
+    margin: auto;
+    max-width: 1140px;
+    height: auto;
+}
+
+
+
+.default.ligth{
+    background-color: #F7F7F7;
+}
+
+.default.light .section-title,
+.default.light .section-body
+{
+    color: #000;
+}
+
+.default.dark{
+    background-color: #000;
+}
+
+.default.dark .section-title,
+.default.dark .section-body
+{
+    color: #F7F7F7;
+}
+
+/*
+    CSS DE ÁREAS ESPECIFICAS
+*/
+
+.section-aboutus{
+    display: flex;
+}
+
+.section-aboutus--left{
+    flex: 1;
+}
+
+.section-aboutus--right{
+    width: 520px;
+    text-align: center;
+
+
+}
+
+.section-aboutus--right img{
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+.section-aboutus--left p{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.section-services{
+    display: flex;
+    max-width: 1140px;
+}
+
+.section-service{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333 ;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.section-service:first-child{
+    border-left: 1px solid #333;
+}
+
+.section-service h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.section-service p{
+    margin-top: 9px;
+    font-size: 12px;
+    color: #999;
+}
+
+.section-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-projects--filters{
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li{
+    list-style: none;
+}
+
+.section-projects--filters li{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 10px;
+    border-left: 1px solid #CCC;
+    color: #555;
+    border-bottom: 3px solid #EEE;
+}
+
+.section-projects--filters li:hover,
+.section-projects--filters li.active
+{
+    border-bottom: 3px solid #B28756;
+    cursor: pointer;
+}
+
+.section-projects--filters li:first-child{
+    border-left: 0px;
+}
+
+.section-projects--photos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-projects--photo{
+    width: 280px;
+}
+
+.section-projects--photoarea{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+
+.section-projects--photoarea img{
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects--photoinf{
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    word-wrap: wrap;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinf{
+    display: flex;
+}
+
+.section-projects--photoinf h5{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.section-team{
+    overflow: hidden;
+}
+
+.section-team-area{
+    background-color: rgb(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bg-team{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.section-team .sliders{
+    height: 100%;
+    width: 1000vw;
+}
+
+.section-team .slide{
+    height: 100%;
+    width: 300px;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+
+.section-team .slidearea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
